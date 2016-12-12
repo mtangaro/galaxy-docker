@@ -1,0 +1,22 @@
+<tool id="hello_world" name="hello_world" version="0.1.0">
+
+  <requirements>
+    <container type="docker">ubuntu:14.04</container>
+  </requirements>
+
+  <command>
+    <![CDATA[
+       echo "Hello World";
+       echo "Hello World" > $output;
+    ]]>
+  </command>
+
+  <inputs>
+    <param name="job_name" type="text" size="25" label="output name" value="HelloWorldValue"/>
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="output" />
+  </outputs>
+
+</tool>
