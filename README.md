@@ -1,1 +1,3 @@
-# galaxy-docker
+# galaxy-tools-dev
+
+Galaxy tools development repository
