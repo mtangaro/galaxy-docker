@@ -1,0 +1,21 @@
+<tool id="simple_dataset" name="Simple Dataset" version="0.01" force_history_refresh="True">
+    <description>Creates a sample data set</description>
+
+    <command>
+      <![CDATA[
+        python "$__tool_directory__/simple_dataset.py" --output_path SampleDataset
+      ]]>
+    </command>
+
+    <inputs>
+        <param name="job_name" type="text" size="25" label="output name" value="SampleDataset"/>
+    </inputs>
+
+    <outputs>
+        <data format="html" name="html_file" label="output.html"/>
+        <collection type="list" label="$job_name" name="output1">
+            <discover_datasets pattern="(?P&lt;name&gt;.*)" directory="SampleDataset" />
+        </collection>
+    </outputs>
+
+</tool>
